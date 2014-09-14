@@ -32,3 +32,6 @@
 # Intellij Idea ignores
 .idea
 *.iml
+
+.classpath
+.project

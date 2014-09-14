@@ -50,25 +50,27 @@ grails.project.dependency.resolution = {
         }
         compile "org.mongodb:mongo-java-driver:2.12.2"
         // runtime 'mysql:mysql-connector-java:5.1.24'
+	test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
     }
 
     plugins {
         // plugins for the build system only
-        build ":tomcat:7.0.47"
+        build ":tomcat:7.0.55"
 
         // plugins for the compile step
-        compile ":scaffolding:2.0.1"
-        compile ':cache:1.1.1'
+        compile ":scaffolding:2.1.2"
+        compile ':cache:1.1.7'
+        compile ":asset-pipeline:1.9.6"
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
-        runtime ":database-migration:1.3.8"
-        runtime ":jquery:1.10.2"
+        runtime ":hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"
+        runtime ":database-migration:1.4.0"
+        runtime ":jquery:1.11.1"
         runtime ":jquery-ui:1.10.3"
-        runtime ":resources:1.2.1"
-        // Uncomment these (or add new ones) to enable additional resources capabilities
-        //runtime ":zipped-resources:1.0.1"
-        //runtime ":cached-resources:1.1"
-        //runtime ":yui-minify-resources:0.1.5"
+        /// Uncomment these to enable additional asset-pipeline capabilities
+        //compile ":sass-asset-pipeline:1.9.0"
+        //compile ":less-asset-pipeline:1.10.0"
+        //compile ":coffee-asset-pipeline:1.8.0"
+        //compile ":handlebars-asset-pipeline:1.3.0.3"
     }
 }
